@@ -12,6 +12,7 @@ User = require("./models/user");
 const blogRoutes = require("./routes/blogs");
 
 //APP CONFIG
+mongoose.connect("mongodb://localhost/blog_app");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.static("views"));
@@ -27,9 +28,12 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-//MAIN ROUTES
-app.use("/", blogRoutes);
 
+//MAIN ROUTE
+app.get("/", (req,res) => res.send("main route"))
+
+//BLOG ROUTES
+app.use("/blogs", blogRoutes);
 
 //REGISTER/LOGIN ROUTES
 
