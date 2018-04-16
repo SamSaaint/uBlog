@@ -30,7 +30,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 //MAIN ROUTE
-app.get("/", (req,res) => res.send("main route"))
+app.get("/", (req,res) => res.render("index"));
 
 //BLOG ROUTES
 app.use("/blogs", blogRoutes);
