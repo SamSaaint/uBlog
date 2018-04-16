@@ -1,8 +1,15 @@
 <% include ./partials/header %>
 
-<section>
+<section id=blogsSection>
 	<% blogs.forEach(function(blog){ %>
-		<a href="#"> <%= blog.title %></a>
+		<div class="card" id="blogCard" style="width: 18rem; float:left">
+  			<img class="card-img-top" src=" <%= blog.image %> " alt="Card image cap" width="286px" height="180px">
+  			<div class="card-body">
+    			<h5 class="card-title"><%= blog.title %></h5>
+    			<p class="card-text"> <%= blog.body.substring(0, 100) %><a href="#">read more</a></p>
+    			<p class="card-text"> <%= blog.created.toDateString() %></p>
+  			</div>
+		</div>
 	<% }) %>
 </section>
 
