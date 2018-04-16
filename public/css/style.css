@@ -1,8 +1,15 @@
+/*MAIN PAGE - GRID OF BLOGS*/
 #blogsSection {
 	width:65%;
 	margin:30px auto;
 }
 
 #blogCard {
-	margin:10px;
+	margin:20px 10px;
+}
+
+#blogCard:hover {
+	position:relative;
+	transform: translateY(-3px);
+	transition:0.3s;
 }

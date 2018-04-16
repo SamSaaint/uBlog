@@ -3,11 +3,11 @@
 <section id=blogsSection>
 	<% blogs.forEach(function(blog){ %>
 		<div class="card" id="blogCard" style="width: 18rem; float:left">
-  			<img class="card-img-top" src=" <%= blog.image %> " alt="Card image cap" width="286px" height="180px">
+  			<a href="#"><img class="card-img-top" src=" <%= blog.image %> " alt="Card image cap" width="286px" height="180px"></a>
   			<div class="card-body">
     			<h5 class="card-title"><%= blog.title %></h5>
-    			<p class="card-text"> <%= blog.body.substring(0, 100) %><a href="#">read more</a></p>
-    			<p class="card-text"> <%= blog.created.toDateString() %></p>
+    			<p class="card-text"> <%= blog.body.substring(0, 100) %>...</a></p>
+    			<p class="card-text"><em> <%= blog.created.toDateString() %> </em></p>
   			</div>
 		</div>
 	<% }) %>
