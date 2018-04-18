@@ -35,6 +35,11 @@
 
 #blogCard {
 	margin:20px 10px;
+	cursor:pointer;
+}
+
+#blogCard a {
+	text-decoration:none;
 }
 
 #blogCard:hover {
@@ -43,6 +48,18 @@
 	transition:0.3s;
 }
 
+/*SHOW PAGE*/
+#showSection {
+	width:65%;
+	height:80vh;
+	margin:120px auto;
+}
+
+#showSection img {
+	height:400px;
+	width:600px;
+	overflow:hidden;
+}
 
 /*BOOTSTRAP MODIFICATIONS*/
 .navbar {

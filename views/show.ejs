@@ -1,0 +1,16 @@
+<% include ./partials/header %>
+
+<section id="showSection">
+	<img src="<%= blog.image %>">
+	<div>
+		<h3><%= blog.title %></h3>	
+	</div>
+	<div>
+    	<p> <%- blog.body %>...</a></p>
+    </div>
+    <div>
+    	<p><em> <%= blog.created.toDateString() %> </em></p>
+    </div>
+</section>
+
+<% include ./partials/footer %>

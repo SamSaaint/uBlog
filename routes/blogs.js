@@ -2,7 +2,7 @@ const express = require("express"),
 router = express.Router(),
 Blog = require("../models/blog");
 
-//INDEX ROUTE - BLOGS
+// INDEX ROUTE - BLOGS
 router.get("/", function(req,res){
 	Blog.find({}, function(err,blogs){
 		if(err){
@@ -13,16 +13,27 @@ router.get("/", function(req,res){
 	})
 })
 
-//NEW BLOG ROUTE
+// NEW BLOG ROUTE
 router.get("/new", (req,res) => res.render("new"));
 
-//CREATE BLOG ROUTE
+// CREATE BLOG ROUTE
 router.post("/", function(req,res){
 	Blog.create(req.body.blog, function(err,newBlog){
 		if(err){
 			res.render("new");
 		} else {
 			res.redirect("/blogs");
+		}
+	})
+})
+
+// SHOW ROUTE
+router.get("/:id", function(req,res){
+	Blog.findById(req.params.id, function(err,foundBlog){
+		if(err){
+			console.log(err)
+		} else {
+			res.render("show", {blog:foundBlog})
 		}
 	})
 })
