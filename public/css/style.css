@@ -1,7 +1,36 @@
-/*MAIN PAGE - GRID OF BLOGS*/
+
+/*COMMON*/
+.createEditSection {
+	width:65%;
+	height:100vh;
+	margin:0 auto;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	width:400px;
+}
+
+#textArea {
+	min-height:300px;
+}
+
+/*INDEX PAGE*/
+#indexSection {
+	width:100%;
+	height:100vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+/*MAIN PAGE/GRID OF BLOGS*/
 #blogsSection {
 	width:65%;
-	margin:30px auto;
+	height:80vh;
+	margin:60px auto;
 }
 
 #blogCard {
@@ -12,4 +41,12 @@
 	position:relative;
 	transform: translateY(-3px);
 	transition:0.3s;
+}
+
+
+/*BOOTSTRAP MODIFICATIONS*/
+.navbar {
+	width:65%;
+	margin:0 auto;
+	background:white;
 }
