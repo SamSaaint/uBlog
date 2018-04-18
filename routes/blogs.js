@@ -2,7 +2,7 @@ const express = require("express"),
 router = express.Router(),
 Blog = require("../models/blog");
 
-// INDEX ROUTE - BLOGS
+// MAIN ROUTE - ALL BLOGS
 router.get("/", function(req,res){
 	Blog.find({}, function(err,blogs){
 		if(err){
@@ -27,7 +27,7 @@ router.post("/", function(req,res){
 	})
 })
 
-// SHOW ROUTE
+// SHOW BLOG ROUTE
 router.get("/:id", function(req,res){
 	Blog.findById(req.params.id, function(err,foundBlog){
 		if(err){
