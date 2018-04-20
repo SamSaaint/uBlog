@@ -2,5 +2,19 @@
 	<section id="indexSection">
 		<button id="scrollArrow" onclick="document.getElementById('indexLoginSection').scrollIntoView({behavior:'smooth'});"><i class="fas fa-angle-down"></i></button>
 	</section>
-	<section id="indexLoginSection"></section>
+	<section id="indexLoginSection">
+		<h1>Login</h1>
+		<form action="/login" method="POST">
+			<div class="form-group">
+				<input class="form-control" type="text" name="username" placeholder="username" required>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="password" name="password" placeholder="password" required>
+			</div>
+			<div class="form-group">
+				<input class="btn btn-md btn-success" type="Submit" name="Submit">
+			</div>
+			<p>No account? Click <a href="/register">here to register.</a></p>
+		</form>
+	</section>
 <% include ./partials/footerIntro %>
