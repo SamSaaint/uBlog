@@ -1,5 +1,6 @@
 <% include ./partials/headerIntro %>
 	<section id="indexSection">
-		<a href="/blogs"><button class="btn btn lg btn-primary">ENTER</button></a>
+		<button id="scrollArrow" onclick="document.getElementById('indexLoginSection').scrollIntoView({behavior:'smooth'});"><i class="fas fa-angle-down"></i></button>
 	</section>
+	<section id="indexLoginSection"></section>
 <% include ./partials/footerIntro %>

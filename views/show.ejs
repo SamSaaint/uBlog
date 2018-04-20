@@ -11,9 +11,9 @@
     <div>
     	<p><em> <%= blog.created.toDateString() %> </em></p>
     </div>
-    <a href="/blogs/<%= blog._id %>/edit"><button class="btn btn-md btn-primary">Edit</button></a>
-    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
-        <button class="btn btn-md btn-danger">Delete</button>
+    <a href="/blogs/<%= blog._id %>/edit">Edit</a>
+    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" id="deleteForm">
+         <a href="javascript:{}" onclick="document.getElementById('deleteForm').submit();">Delete</a>
     </form>
 </section>
 

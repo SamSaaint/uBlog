@@ -39,6 +39,21 @@ app.use("/blogs", blogRoutes);
 
 //REGISTER/LOGIN ROUTES
 
+app.get("/register", (req,res) => res.render("register"));
+
+app.post("/register", function(req,res){
+	let username = req.body.username;
+	let password = req.body.password;
+	User.register(new User({username: username}), password, function(err,user){
+		if(err){
+			console.log(err);
+			return res.render("register");
+		}
+		passport.authenticate("local")(req,res,function(){
+			res.redirect("/");
+		})
+	})
+})
 
 //SERVER
 app.listen(port, () => console.log("SERVER UP"));

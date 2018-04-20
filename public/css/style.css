@@ -26,6 +26,33 @@
 	align-items:flex-end;
 }
 
+#indexLoginSection {
+	width:100%;
+	height:100vh;
+	background:blue;
+}
+
+#scrollArrow {
+	border:none;
+	background-color:white;
+	outline:none;
+	font-size:40px;
+	position:relative;
+	cursor:pointer;
+	animation: jumpyArrow 1.3s infinite ease;
+}
+
+@keyframes jumpyArrow {
+	0% {
+		bottom:5px;
+	}
+	50% {
+		bottom:0;
+	}
+	100% {
+		bottom:5px;
+	}
+}
 
 /*MAIN PAGE/GRID OF BLOGS*/
 #blogsSection {
