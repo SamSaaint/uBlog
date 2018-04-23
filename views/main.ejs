@@ -6,7 +6,7 @@
   			<a href="/blogs/<%= blog._id %>"><img class="card-img-top" src=" <%= blog.image %> " alt="Card image cap" width="286px" height="180px"></a>
   			<div class="card-body">
     			<h5 class="card-title"><a href="/blogs/<%= blog._id %>"><%= blog.title %></a></h5>
-    			<p class="card-text"> <%- blog.body.substring(0, 100) %>...</a></p>
+    			<p class="card-text"> <%- blog.desc.substring(0, 100) %>...</a></p>
     			<p class="card-text"><em> <%= blog.created.toDateString() %> </em></p>
   			</div>
 		</div>
