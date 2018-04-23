@@ -37,7 +37,7 @@ app.get("/", (req,res) => res.render("index"));
 //BLOG ROUTES
 app.use("/blogs", blogRoutes);
 
-//REGISTER ROUTES
+//REGISTER/LOGIN ROUTES
 
 app.get("/register", (req,res) => res.render("register"));
 
@@ -53,19 +53,6 @@ app.post("/register", function(req,res){
 			res.redirect("/");
 		})
 	})
-})
-
-//LOGIN ROUTE
-app.post("/", passport.authenticate("local", {
-	successRedirect: "/blogs",
-	failureRedirect: "/"
-}), function(req,res){	
-})
-
-//LOGOUT ROUTE
-app.get("/logout", function(req,res){
-	req.logout();
-	res.redirect("/");
 })
 
 //SERVER
