@@ -11,6 +11,9 @@
     <div>
     	<p><em> <%= blog.created.toDateString() %> </em></p>
     </div>
+    <div>
+        <p>Submitted by <%= blog.author.username %></p>
+    </div>
     <a href="/blogs/<%= blog._id %>/edit">Edit</a>
     <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" id="deleteForm">
          <a href="javascript:{}" onclick="document.getElementById('deleteForm').submit();">Delete</a>

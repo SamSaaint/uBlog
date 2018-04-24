@@ -8,7 +8,6 @@ router.get("/",isLoggedIn, function(req,res){
 		if(err){
 			console.log("ERROR");
 		} else {
-			console.log(req.user)
 			res.render("main", {blogs:blogs});
 		}
 	})
@@ -17,16 +16,22 @@ router.get("/",isLoggedIn, function(req,res){
 // NEW BLOG ROUTE
 router.get("/new",isLoggedIn, function(req,res){
 	res.render("new");
-	console.log(req.user);
 });
 
 // CREATE BLOG ROUTE
 router.post("/",isLoggedIn, function(req,res){
-	Blog.create(req.body.blog, function(err,newBlog){
+	let title = req.body.blog.title;
+	let image = req.body.blog.image;
+	let body = req.body.blog.body;  
+	let author = {
+		id: req.user._id,
+		username: req.user.username
+	}
+	let createdBlog = {title: title, image: image, body: body, author: author}
+	Blog.create(createdBlog, function(err,newBlog){
 		if(err){
 			res.render("new");
 		} else {
-			console.log(newBlog)
 			res.redirect("/blogs");
 		}
 	})
@@ -38,7 +43,6 @@ router.get("/:id",isLoggedIn, function(req,res){
 		if(err){
 			console.log(err)
 		} else {
-			console.log(req.user);
 			res.render("show", {blog:foundBlog})
 		}
 	})
