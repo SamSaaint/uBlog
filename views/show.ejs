@@ -14,10 +14,12 @@
     <div>
         <p>Submitted by <%= blog.author.username %></p>
     </div>
-    <a href="/blogs/<%= blog._id %>/edit">Edit</a>
-    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" id="deleteForm">
-         <a href="javascript:{}" onclick="document.getElementById('deleteForm').submit();">Delete</a>
-    </form>
+    <% if(blog.author.id.equals(currentUser._id)){ %>
+        <a id="editLink" href="/blogs/<%= blog._id %>/edit">Edit</a>
+        <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" id="deleteForm">
+            <a href="javascript:{}" onclick="document.getElementById('deleteForm').submit();">Delete</a>
+        </form>
+    <% } %>
 </section>
 
 <% include ./partials/footer %>
