@@ -1,7 +1,7 @@
 <% include ./partials/header %>
 
 <section class="createEditSection">
-	<form action="/blogs/<%= blog._id %>?_method=PUT" method="POST" class="form">
+	<form action="/blogs/<%=blog._id%>?_method=PUT" method="POST" class="form">
 		<div class="form-group">
 			<label for="title">Edit title</label>
 			<input id="title" class="form-control" type="text" name="blog[title]" maxlength="40" value="<%- blog.title %>" required>

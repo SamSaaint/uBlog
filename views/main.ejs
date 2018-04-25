@@ -7,7 +7,7 @@
   			<div class="card-body">
     			<h5 class="card-title"><a href="/blogs/<%= blog._id %>"><%= blog.title %></a></h5>
     			<p class="card-text"> <%- blog.body.substring(0, 100) %>...</a></p>
-    			<p class="card-text"><em> <%= blog.created.toDateString() %> </em></p>
+    			<p class="card-text"><em> <%= blog.created.toDateString() %> by <%= blog.author.username %> </em></p>
   			</div>
 		</div>
 	<% }) %>

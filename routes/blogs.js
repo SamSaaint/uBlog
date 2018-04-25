@@ -49,18 +49,14 @@ router.get("/:id",isLoggedIn, function(req,res){
 })
 
 // EDIT BLOG ROUTE
-router.get("/:id/edit",isLoggedIn, function(req,res){
+router.get("/:id/edit",checkBlogOwnership, function(req,res){
 	Blog.findById(req.params.id, function(err,foundBlog){
-		if(err){
-			res.redirect("/blogs");
-		} else{
-			res.render("edit", {blog: foundBlog});
-		}
+		res.render("edit", {blog: foundBlog});
 	})
 })
 
 // UPDATE BLOG ROUTE
-router.put("/:id",isLoggedIn, function(req,res){
+router.put("/:id",checkBlogOwnership, function(req,res){
 	Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err,updatedBlog){
 		if(err){
 			res.redirect("/blogs");
@@ -71,7 +67,7 @@ router.put("/:id",isLoggedIn, function(req,res){
 })
 
 // DELETE BLOG ROUTE
-router.delete("/:id",isLoggedIn, function(req,res){
+router.delete("/:id",checkBlogOwnership, function(req,res){
 	Blog.findByIdAndRemove(req.params.id, function(err){
 		if(err){
 			res.redirect("/blogs");
@@ -87,6 +83,24 @@ function isLoggedIn(req,res,next){
     return next();
   }
   res.redirect("/")
+}
+
+function checkBlogOwnership(req,res,next){
+	if(req.isAuthenticated()){
+		Blog.findById(req.params.id, function(err,foundBlog){
+			if(err){
+				res.redirect("back");
+			} else {
+				if(foundBlog.author.id.equals(req.user._id)){
+					next();
+				} else {
+					res.redirect("back");
+				}
+			}
+		})
+	} else {
+		res.redirect("back")
+	}
 }
 
 module.exports = router;
