@@ -42,9 +42,15 @@
 	filter:grayscale(50%);
 }
 
-#indexSection h1 {
+#indexHeader {
 	opacity:0;
 	animation: 1s fadein 0.3s forwards;
+	text-align: center;
+	margin-top:85px;
+}
+
+#indexHeader h2 {
+	letter-spacing: 2px;
 }
 
 #indexSection button {
@@ -68,6 +74,7 @@
 
 #indexLoginSection h1 {
 	margin-bottom:20px;
+	letter-spacing: -1px;
 }
 
 .myButton {
