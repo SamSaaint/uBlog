@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Blog App</title>
+        <title>uBlog</title>
         <link rel="stylesheet" type="text/css" href="/css/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -19,7 +19,7 @@
                    <a class="nav-link" href="/blogs/new">New Blog</a>
                  </li>
                </ul>
-               <span class="navbar-text">You are signed in as <%= currentUser.username %> </span>
+               <span class="navbar-text">You are signed in as <span id="navCurrentUser"><%= currentUser.username %></span> </span>
                <a class="nav-link" href="/">Logout</a>
             </div>
         </nav>

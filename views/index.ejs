@@ -1,9 +1,10 @@
 <% include ./partials/headerIntro %>
 	<section id="indexSection">
-		<button id="enterButton" onclick="document.getElementById('indexLoginSection').scrollIntoView({behavior:'smooth'});">ENTER</button>
+		<h1>Welcome to <b>uBlog</b></h1>
+		<button class="myButton" onclick="document.getElementById('indexLoginSection').scrollIntoView({behavior:'smooth'});">ENTER</button>
 	</section>
 	<section id="indexLoginSection">
-		<h1>Login</h1>
+		<h1>Log in</h1>
 		<form action="/" method="POST">
 			<div class="form-group">
 				<input class="form-control" type="text" name="username" placeholder="username" required>
@@ -12,7 +13,7 @@
 				<input class="form-control" type="password" name="password" placeholder="password" required>
 			</div>
 			<div class="form-group">
-				<input class="btn btn-md btn-success" type="Submit" name="Submit">
+				<input class="btn btn-md btn-dark" type="Submit" name="Submit">
 			</div>
 			<p>No account? Click <a href="/register">here to register.</a></p>
 		</form>
