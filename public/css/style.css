@@ -141,8 +141,17 @@
 
 #showSection img {
 	height:400px;
-	width:600px;
+	width:50%;
 	overflow:hidden;
+	float:left;
+	margin-right:15px;
+	border-radius: 3px;
+}
+
+#showSection + div {
+	height:400px;
+	width:50%;
+	margin-left:15px;
 }
 
 

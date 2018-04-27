@@ -2,24 +2,26 @@
 
 <section id="showSection">
 	<img src="<%= blog.image %>">
-	<div>
-		<h3><%= blog.title %></h3>	
-	</div>
-	<div>
-    	<p> <%- blog.body %>...</a></p>
-    </div>
     <div>
-    	<p><em> <%= blog.created.toDateString() %> </em></p>
+    	<div>
+    		<h3><%= blog.title %></h3>	
+    	</div>
+    	<div>
+        	<p> <%- blog.body %></a></p>
+        </div>
+        <div>
+        	<p><em> <%= blog.created.toDateString() %> </em></p>
+        </div>
+        <div>
+            <p>Submitted by <%= blog.author.username %></p>
+        </div>
+        <% if(blog.author.id.equals(currentUser._id)){ %>
+            <a id="editLink" href="/blogs/<%= blog._id %>/edit">Edit</a>
+            <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" id="deleteForm">
+                <a href="javascript:{}" onclick="document.getElementById('deleteForm').submit();">Delete</a>
+            </form>
+        <% } %>
     </div>
-    <div>
-        <p>Submitted by <%= blog.author.username %></p>
-    </div>
-    <% if(blog.author.id.equals(currentUser._id)){ %>
-        <a id="editLink" href="/blogs/<%= blog._id %>/edit">Edit</a>
-        <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" id="deleteForm">
-            <a href="javascript:{}" onclick="document.getElementById('deleteForm').submit();">Delete</a>
-        </form>
-    <% } %>
 </section>
 
 <% include ./partials/footer %>
