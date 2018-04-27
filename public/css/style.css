@@ -6,10 +6,10 @@
 .createEditSection {
 	width:65%;
 	height:100vh;
-	margin:0 auto;
+	margin:100px auto;
 	display:flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	animation: 0.7s fadein 0.2s forwards;
 	opacity:0;
 }
@@ -19,7 +19,9 @@
 }
 
 #textArea {
-	min-height:460px;
+	height:400px;
+	overflow:hidden;
+	max-height:400px;
 }
 
 #navCurrentUser {
