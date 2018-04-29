@@ -5,7 +5,6 @@
 
 .createEditSection {
 	width:65%;
-	height:100vh;
 	margin:100px auto;
 	display:flex;
 	justify-content: center;
@@ -30,10 +29,15 @@
 }
 
 #footer {
-	height:80px;
+	height:33px;
 	width:100%;
-	background:blue;
-	position:fixed;
+	background:#312c32;
+	position: fixed;
+	color:#dbe9d8;
+	bottom: 0;
+	text-align:center;
+	line-height: 33px;
+	font-size: 13px;
 }
 
 /*INDEX PAGE*/
@@ -130,8 +134,7 @@
 
 /*MAIN PAGE/GRID OF BLOGS*/
 #blogsSection {
-	width:65%;
-	height:80vh;
+	width:1550px;
 	margin:60px auto;
 }
 
@@ -156,29 +159,26 @@
 
 /*SHOW PAGE*/
 #showSection {
-	width:65%;
-	height:80vh;
+	width:900px;
 	margin:120px auto;
 	animation: 0.7s fadein 0.2s forwards;
 	opacity:0;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-#showSection img {
-	height:400px;
-	width:618px;
+#showSectionImage {
+	height:600px;
+	width:900px;
 	overflow:hidden;
-	float:left;
-	margin-right:15px;
-	border-radius: 3px;
+	border-radius:3px;
+	margin-bottom:12px;
 }
 
-#showSection + div {
-	height:400px;
-	width:50%;
-	margin-left:15px;
+#showSectionText {
 	text-align:justify;
 }
-
 
 /*BOOTSTRAP MODIFICATIONS*/
 .navbar {
