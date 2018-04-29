@@ -10,7 +10,7 @@
 	display:flex;
 	justify-content: center;
 	align-items: flex-start;
-	animation: 0.7s fadein 0.2s forwards;
+	animation: 0.4s fadeinUp 0.2s forwards;
 	opacity:0;
 }
 
@@ -27,6 +27,13 @@
 #navCurrentUser {
 	color:black;
 	padding-right:20px;
+}
+
+#footer {
+	height:80px;
+	width:100%;
+	background:blue;
+	position:fixed;
 }
 
 /*INDEX PAGE*/
@@ -46,7 +53,7 @@
 
 #indexHeader {
 	opacity:0;
-	animation: 1s fadein 0.3s forwards;
+	animation: 0.6s fadeinUp 0.2s forwards;
 	text-align: center;
 	margin-top:85px;
 }
@@ -57,17 +64,31 @@
 
 #indexSection button {
 	opacity:0;
-	animation: 2s fadein 0.6s forwards;
+	animation: 0.9s fadeinUp 0.4s forwards;
+}
+
+@keyframes fadeinUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100%{
+		opacity:1;
+		transform: translateY(0px);
+	}
 }
 
 @keyframes fadein {
+	0% {
+		opacity: 0;
+	}
 	100%{
 		opacity:1;
 	}
 }
 
 #indexLoginSection {
-	width:18%;
+	width:260px;
 	height:100vh;
 	margin:0 auto;
 	padding-top: 160px;
@@ -118,7 +139,10 @@
 	opacity:0;
 	margin:20px 10px;
 	cursor:pointer;
+	width: 18rem;
+	float:left;
 	animation: 0.7s fadein 0.2s forwards;
+	text-align: justify;
 }
 
 #blogCard a {
@@ -143,7 +167,7 @@
 
 #showSection img {
 	height:400px;
-	width:50%;
+	width:618px;
 	overflow:hidden;
 	float:left;
 	margin-right:15px;
@@ -154,6 +178,7 @@
 	height:400px;
 	width:50%;
 	margin-left:15px;
+	text-align:justify;
 }
 
 
@@ -166,11 +191,11 @@
 
 /*REGISTER PAGE*/
 #registerSection {
-	width:18%;
+	width:260px;
 	height:120vh;
 	margin:0 auto;
 	padding-top: 100px;
 	text-align:center;
-	animation: 0.7s fadein 0.2s forwards;
+	animation: 0.4s fadeinUp 0.2s forwards;
 	opacity:0;
 }

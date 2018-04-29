@@ -2,7 +2,7 @@
 
 <section id="blogsSection">
 	<% blogs.forEach(function(blog){ %>
-		<div class="card" id="blogCard" style="width: 18rem; height:26rem; float:left">
+		<div class="card" id="blogCard">
   			<a href="/blogs/<%= blog._id %>"><img class="card-img-top" src=" <%= blog.image %> " alt="Card image cap" width="286px" height="180px"></a>
   			<div class="card-body">
     			<h5 class="card-title"><a href="/blogs/<%= blog._id %>"><%= blog.title %></a></h5>
