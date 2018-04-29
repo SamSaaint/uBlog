@@ -139,8 +139,6 @@
 	opacity:0;
 	margin:20px 10px;
 	cursor:pointer;
-	width: 18rem;
-	float:left;
 	animation: 0.7s fadein 0.2s forwards;
 	text-align: justify;
 }
