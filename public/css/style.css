@@ -32,8 +32,7 @@
 }
 
 #navCurrentUser {
-	color:black;
-	padding-right:20px;
+	padding-right:10px;
 }
 
 #footer {
@@ -46,6 +45,15 @@
 	text-align:center;
 	line-height: 33px;
 	font-size: 13px;
+}
+
+#logout {
+	color:#5e0231 !important;
+	transition:0.2s;
+}
+
+#logout:hover {
+	transform:scale(0.95);
 }
 
 /*BOOTSTRAP MODIFICATIONS*/
@@ -206,7 +214,7 @@
 }
 
 #blogCard:hover {
-	transform: translateY(-5px);
+	transform: translateY(-3px);
 }
 
 #blogCard a {
