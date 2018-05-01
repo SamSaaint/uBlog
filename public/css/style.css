@@ -9,6 +9,7 @@
 	display:-webkit-box;
 	display:-ms-flexbox;
 	display:flex;
+	cursor:default;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
@@ -60,6 +61,7 @@
 #indexSection {
 	width:100%;
 	height:100vh;
+	cursor:default;
 	display:-webkit-box;
 	display:-ms-flexbox;
 	display:flex;
@@ -149,6 +151,7 @@
 	margin:0 auto;
 	padding-top: 160px;
 	text-align:center;
+	cursor:default;
 }
 
 #indexLoginSection h1 {
@@ -190,36 +193,25 @@
 #blogsSection {
 	width:1550px;
 	margin:60px auto;
+	cursor:default;
 }
 
 #blogCard {
-	opacity:0;
+	opacity:1;
 	margin:20px 10px;
 	cursor:pointer;
-	-webkit-animation: 0.7s fadeinUp 0.2s forwards;
-	        animation: 0.7s fadeinUp 0.2s forwards;
-	text-align: justify;
+	text-align:center;
+	position:relative;
+	transition:0.3s;
+}
+
+#blogCard:hover {
+	transform: translateY(-5px);
 }
 
 #blogCard a {
 	text-decoration:none;
 }
-
-#blogCard {
-	text-align:center;
-}
-
-#blogCard:hover {
-	position:relative;
-	-webkit-transform: translateY(-3px);
-	    -ms-transform: translateY(-3px);
-	        transform: translateY(-3px);
-	-webkit-transition:0.3s;
-	-o-transition:0.3s;
-	transition:0.3s;
-}
-
-
 
 /*SHOW PAGE*/
 #showSection {
@@ -228,6 +220,7 @@
 	-webkit-animation: 0.4s fadein forwards;
 	        animation: 0.4s fadein forwards;
 	opacity:0;
+	cursor:default;
 }
 
 #showSectionImage {
@@ -242,11 +235,14 @@
 	text-align:justify;
 	border:1px solid #b3c2bf;
 	border-top:none;
-	cursor: default;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
 }
 
+#editLink {
+	float:left;
+	margin-right:10px;
+}
 
 /*REGISTER PAGE*/
 #registerSection {
@@ -258,6 +254,7 @@
 	-webkit-animation: 0.4s fadeinUp 0.2s forwards;
 	        animation: 0.4s fadeinUp 0.2s forwards;
 	opacity:0;
+	cursor:default;
 }
 
 /*SCALABILITY*/
