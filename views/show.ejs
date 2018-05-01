@@ -2,7 +2,7 @@
 
 <section id="showSection">
     <div>
-	   <img src="<%= blog.image %>"  id="showSectionImage">
+	   <img src="<%= blog.image %>"  id="showSectionImage" width="900px" height="600px">
     </div>
     <div id="showSectionText">
     	<div>
@@ -15,7 +15,7 @@
         	<p><em> <%= blog.created.toDateString() %> </em></p>
         </div>
         <div>
-            <p>Submitted by <%= blog.author.username %></p>
+            <p>Submitted by <b><%= blog.author.username %></b></p>
         </div>
         <% if(blog.author.id.equals(currentUser._id)){ %>
             <a id="editLink" href="/blogs/<%= blog._id %>/edit">Edit</a>

@@ -171,12 +171,16 @@ COMMON*/
 	height:auto;
 	overflow:hidden;
 	border-radius:3px;
-	margin-bottom:12px;
-	object-fit: cover;
 }
 
 #showSectionText {
+	padding:12px;
 	text-align:justify;
+	border:1px solid #b3c2bf;
+	border-top:none;
+	cursor: default;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 }
 
 /*BOOTSTRAP MODIFICATIONS*/
