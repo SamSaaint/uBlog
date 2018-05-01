@@ -48,12 +48,12 @@
 }
 
 #logout {
-	color:#5e0231 !important;
+	color:#300032 !important;
 	transition:0.2s;
 }
 
 #logout:hover {
-	transform:scale(0.95);
+	transform:scale(0.96);
 }
 
 /*BOOTSTRAP MODIFICATIONS*/
@@ -240,7 +240,6 @@
 
 #showSectionText {
 	padding:16px;
-	text-align:justify;
 	border:1px solid #b3c2bf;
 	border-top:none;
 	border-bottom-left-radius: 8px;
@@ -308,5 +307,8 @@
 @media screen and (max-width:365px) {
 	#blogsSection {
 		margin-left:18px;
+	}
+	#showSectionText h3 {
+		font-size:1.4rem;
 	}
 }
