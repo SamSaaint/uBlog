@@ -2,12 +2,11 @@
 
 <section id="blogsSection">
   <% blogs.forEach(function(blog){ %>
-    <div class="card" id="blogCard" style="width: 18rem; height:26rem; float:left">
+    <div class="card" id="blogCard" style="width: 18rem; height:19.5rem; float:left">
         <a href="/blogs/<%= blog._id %>"><img class="card-img-top" src=" <%= blog.image %> " alt="Card image cap" width="286px" height="180px"></a>
         <div class="card-body">
           <h5 class="card-title"><a href="/blogs/<%= blog._id %>"><%= blog.title %></a></h5>
-          <p class="card-text"> <%- blog.body.substring(0, 100) %>...</a></p>
-          <p class="card-text"><em> <%= blog.created.toDateString() %> by <%= blog.author.username %> </em></p>
+          <p class="card-text"><em> <%= blog.created.toDateString() %> by <b><%= blog.author.username %></b> </em></p>
         </div>
     </div>
   <% }) %>
