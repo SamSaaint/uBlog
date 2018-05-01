@@ -157,23 +157,22 @@ COMMON*/
 }
 
 
+
 /*SHOW PAGE*/
 #showSection {
 	width:900px;
 	margin:120px auto;
 	animation: 0.7s fadein 0.2s forwards;
 	opacity:0;
-	display:flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 #showSectionImage {
-	height:600px;
-	width:900px;
+	max-width:100%;
+	height:auto;
 	overflow:hidden;
 	border-radius:3px;
 	margin-bottom:12px;
+	object-fit: cover;
 }
 
 #showSectionText {
@@ -208,6 +207,9 @@ COMMON*/
 	.navbar {
 		width:100%;	
 	}
+	#showSection {
+		width:700px;
+	}
 }
 
 @media screen and (max-width: 770px) {
@@ -217,6 +219,9 @@ COMMON*/
 	#textArea {
 		width:500px;
 	}
+	#showSection {
+		width:500px;
+	}
 }
 
 @media screen and (max-width: 550px) {
@@ -224,6 +229,9 @@ COMMON*/
 		width:300px;
 	}
 	#textArea {
+		width:300px;
+	}
+	#showSection {
 		width:300px;
 	}
 }
