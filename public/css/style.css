@@ -323,10 +323,6 @@
 	#indexHeader h2 {
 		font-size:1.3em;
 	}
-	#blogsSection {
-		margin-left:85px;
-	}
-
 }
 
 @media screen and (max-width:365px) {
