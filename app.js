@@ -5,7 +5,7 @@ bodyParser= require("body-parser"),
 passport = require("passport"),
 LocalStrategy = require("passport-local"),
 passportLocalMognoose = require("passport-local-mongoose"),
-port = process.env.port || 3000,
+port = process.env.PORT || 3000,
 methodOverride = require("method-override"),
 User = require("./models/user");
 
