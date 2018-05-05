@@ -65,6 +65,16 @@
 	border-bottom-right-radius:10px;
 }
 
+.navbar-toggler {
+	border:none !important;
+}
+
+.navbar-toggler:focus {
+	outline:none;
+}
+
+.navbar
+
 /*INDEX PAGE*/
 #indexSection {
 	width:100%;
@@ -271,9 +281,12 @@
 	}
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 991px) {
 	.navbar {
+		background:#f6f1ed;
 		width:100%;	
+		border-bottom: 2px solid #f6f1ed;
+		border-radius:0px;
 	}
 	#showSection {
 		width:700px;
