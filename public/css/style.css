@@ -272,6 +272,10 @@
 	cursor:default;
 }
 
+#registerSection h1{
+	margin-bottom:20px;
+}
+
 /*SCALABILITY*/
 @media screen and (max-width: 1660px) {
 	#blogsSection {
