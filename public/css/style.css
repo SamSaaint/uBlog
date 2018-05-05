@@ -317,6 +317,13 @@
 	#showSection {
 		width:300px;
 	}
+	#indexHeader h1 {
+		font-size:10px;
+	}
+	#indexHeader h2 {
+		font-size:10px;
+	}
+
 }
 
 @media screen and (max-width:365px) {
