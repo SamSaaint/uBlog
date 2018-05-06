@@ -14,7 +14,7 @@ const blogRoutes = require("./routes/blogs");
 
 //APP CONFIG
 app.use(methodOverride("_method"));
-mongoose.connect(process.env.databaseURL);
+mongoose.connect(process.env.databaseURL || "mongodb://localhost/blog_app");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.static("views"));
